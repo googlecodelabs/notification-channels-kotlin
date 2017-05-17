@@ -47,7 +47,10 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
      */
     init {
 
-       // Create the channel object with the unique ID FOLLOWERS_CHANNEL
+        // TODO Explicitly set badging to true for the direct message channel and false for the
+        // followers channel
+
+        // Create the channel object with the unique ID FOLLOWERS_CHANNEL
         val followersChannel = NotificationChannel(
                 FOLLOWERS_CHANNEL,
                 getString(R.string.notification_channel_followers),
