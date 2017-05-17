@@ -47,9 +47,6 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
      */
     init {
 
-        // TODO Explicitly set badging to true for the direct message channel and false for the
-        // followers channel
-
         // Create the channel object with the unique ID FOLLOWERS_CHANNEL
         val followersChannel = NotificationChannel(
                 FOLLOWERS_CHANNEL,
@@ -59,6 +56,7 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
         // Configure the channel's initial settings
         followersChannel.lightColor = Color.GREEN
         followersChannel.vibrationPattern = longArrayOf(100, 200, 300, 400, 500, 400, 500, 200, 500)
+        followersChannel.setShowBadge(false)
 
         // Submit the notification channel object to the notification manager
         mNotificationManager.createNotificationChannel(followersChannel)
@@ -69,6 +67,7 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
                 getString(R.string.notification_channel_direct_message),
                 NotificationManager.IMPORTANCE_HIGH)
         dmChannel.lightColor = Color.BLUE
+        dmChannel.setShowBadge(true)
         mNotificationManager.createNotificationChannel(dmChannel)
     }
 
