@@ -82,6 +82,7 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
      * @return A Notification.Builder configured with the selected channel and details
      */
     fun getNotificationFollower(title: String, body: String): Notification.Builder {
+        // TODO Create the notification in the followers channel by passing in the channel ID
         return Notification.Builder(applicationContext)
                 .setContentTitle(title)
                 .setContentText(body)
@@ -103,6 +104,7 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
      * @return A Notification.Builder configured with the selected channel and details
      */
     fun getNotificationDM(title: String, body: String): Notification.Builder {
+        // TODO Create the notification in the direct message channel by passing in the channel ID
         return Notification.Builder(applicationContext)
                 .setContentTitle(title)
                 .setContentText(body)
