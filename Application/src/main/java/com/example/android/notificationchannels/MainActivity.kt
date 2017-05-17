@@ -96,7 +96,10 @@ class MainActivity : Activity() {
      * @param channel Name of channel to configure
      */
     private fun goToNotificationChannelSettings(channel: String) {
-        // TODO Complete this method to open the *channel* specific settings
+        val intent = Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
+        intent.putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+        intent.putExtra(Settings.EXTRA_CHANNEL_ID, channel)
+        startActivity(intent)
     }
 
     /**
@@ -119,12 +122,10 @@ class MainActivity : Activity() {
             when (view.id) {
                 R.id.follow_button -> sendNotification(NOTIFICATION_FOLLOW)
                 R.id.un_follow_button -> sendNotification(NOTIFICATION_UNFOLLOW)
-                // TODO Pass in the correct channel ID to the method
-                R.id.follower_channel_settings_button -> goToNotificationChannelSettings("")
+                R.id.follower_channel_settings_button -> goToNotificationChannelSettings(NotificationHelper.FOLLOWERS_CHANNEL)
                 R.id.friend_dm_button -> sendNotification(NOTIFICATION_DM_FRIEND)
                 R.id.coworker_dm_button -> sendNotification(NOTIFICATION_DM_COWORKER)
-                // TODO Pass in the correct channel ID to the method
-                R.id.dm_channel_settings_button -> goToNotificationChannelSettings("")
+                R.id.dm_channel_settings_button -> goToNotificationChannelSettings(NotificationHelper.DIRECT_MESSAGE_CHANNEL)
                 R.id.go_to_settings_button -> goToNotificationSettings()
                 else -> Log.e(TAG, getString(R.string.error_click))
             }
