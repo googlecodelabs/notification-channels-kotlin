@@ -1,19 +1,8 @@
-# Notification Channels and Badges Codelab Code (Kotlin)
+# This code is DEPRECATED
 
-This is the codelab code for the [Notification Channels and Badging Codelab (Kotlin)](https://codelabs.developers.google.com/codelabs/notification-channels-kotlin/index.html).
+The [associated codelab](https://codelabs.developers.google.com/codelabs/notification-channels-kotlin/#0) and this code have been deprecated. Please use the following resources instead:
+* [Using Android Notifications](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-notifications/index.html#0)
 
-## Getting Started
-
-This sample is provided to demonstrate a how to create and interact with [NotificationChannels](https://developer.android.com/preview/features/notification-channels.html).
-
-You can download the starting code zip [here](https://github.com/googlecodelabs/notification-channels-kotlin/archive/initial-code.zip).
-
-If you are comfortable with git, you can also clone the entire repository and check out the different branches for each step.
-
-## Support
-
-If you've found an error in this sample code or codelab, please file an issue:
-https://github.com/googlecodelabs/notification-channels-kotlin/issues
 
 ## License
 
